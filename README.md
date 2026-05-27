@@ -72,7 +72,32 @@ Python · FAISS · sentence-transformers · transformers · PyPDF2
 
 ## What I Learned
 
-TBD — will be updated after all components are complete.
+RAG is not one thing — it is a pipeline with four distinct components,
+and each one affects the final answer quality.
+
+Chunking strategy directly impacts retrieval.
+A chunk that cuts mid-sentence loses context and produces noisy embeddings.
+
+Retrieval quality is measurable.
+100% accuracy on this dataset showed that semantic search with FAISS
+finds the right chunk even without exact keyword matching.
+
+Grounding score revealed that the model answered from context, not memory.
+This is the core value of RAG — it turns a hallucinating model
+into a document-grounded question answering system.
+
+The hardest part was not the code — it was making all components work together:
+local embeddings, vector store, local LLM, and evaluation in one pipeline.
+
+---
+
+## Results
+
+| Metric | Score |
+|--------|-------|
+| Retrieval Accuracy | 100% |
+| Hallucination Detected | None |
+| Grounding Score | 0.66 - 0.81 |
 
 ---
 
