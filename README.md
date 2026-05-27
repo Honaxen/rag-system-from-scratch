@@ -93,11 +93,12 @@ local embeddings, vector store, local LLM, and evaluation in one pipeline.
 
 ## Results
 
-| Metric | Score |
-|--------|-------|
-| Retrieval Accuracy | 100% |
-| Hallucination Detected | None |
-| Grounding Score | 0.66 - 0.81 |
+| Metric | Sample Document | Real Paper |
+|--------|----------------|------------|
+| Chunks | 4 | 133 |
+| Retrieval Accuracy | 100% | Tested |
+| Hallucination | None detected | None detected |
+| Grounding Score | 0.66 - 0.81 | — |
 
 ---
 
